@@ -104,7 +104,7 @@ public abstract class MongoRepositoryAndPageableMock<T> implements MongoReposito
 		
 		List<T> elements = documents.values().stream().limit(size).collect(Collectors.toList());
 		
-		return new PageMock<>(size, elements);
+		return new PageMock<>(documents.size(), elements);
 	}
 
 	@Override

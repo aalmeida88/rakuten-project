@@ -92,13 +92,14 @@ public class ProductApiTest {
     	controller.create(request);
     }
     
-    @Test(expected = NotFoundException.class)
+    @Test(expected = NotExistsException.class)
     public void checkDeleteProduct() {
     	ProductDTO request = this.buildProductDTO("code", TestUtils.CATEGORY_CODE_EXISTENT);
     	controller.create(request);
     	ProductDTO ret = controller.get(request.getCode());
     	Assert.assertEquals(request.getCode(), ret.getCode());
     	controller.delete(request.getCode());
+	controller.get(request.getCode());
     }
     
     @Test(expected = UnsuportedCurrencyException.class)
