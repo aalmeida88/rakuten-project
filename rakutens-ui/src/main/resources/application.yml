@@ -1,0 +1,12 @@
+jsf:
+  PROJECT_STAGE: Production
+  FACELETS_LIBRARIES: /tags/tags.taglib.xml
+  primefaces:
+    theme: black-tie
+integration:
+  product:
+    baseUrl: http://127.0.0.1:9291
+  category:
+    baseUrl: http://127.0.0.1:9290
+    cache:
+      timeMins: 1
