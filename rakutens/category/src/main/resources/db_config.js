@@ -14,11 +14,12 @@ function addCateg(id, desc, ancestors){
 
 db.category.remove({});
 addCateg("elc", "Electronics", []);
-addCateg("elc-audio", "Audio & Video Components", ["elc", "all"]);
-addCateg("elc-photo", "Camera & Photo", ["elc", "all"]);
-addCateg("elc-car", "Car Audio & Video", ["elc", "all"]);
-addCateg("elc-comp", "Computers", ["elc", "all"]);
-addCateg("elc-home", "Home Audio", ["elc", "all"]);
+addCateg("elc-audio", "Audio & Video Components", ["elc"]);
+addCateg("elc-aud-ant", "Antenas", ["elc-audio", "elc"]);
+addCateg("elc-photo", "Camera & Photo", ["elc"]);
+addCateg("elc-car", "Car Audio & Video", ["elc"]);
+addCateg("elc-comp", "Computers", ["elc"]);
+addCateg("elc-home", "Home Audio", ["elc"]);
 addCateg("hlt", "Health", []);
 addCateg("hlt-alt", "Alternative Medicine", ["hlt"]);
 addCateg("hlt-alt-ac", "Acupuncture", ["hlt-alt", "hlt"]);
